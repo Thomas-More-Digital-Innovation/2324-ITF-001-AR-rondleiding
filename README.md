@@ -10,7 +10,7 @@
 
 ## Mock-up
 
-**Figma**: [link naar figma]("https://www.figma.com/proto/UZpcV1O9jElgpOnIFi0qLN/AR-rondleiding?page-id=0%3A1&node-id=1-3&node-type=canvas&viewport=700%2C527%2C0.93&t=E6ITg2acx4zagTFb-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=1%3A3")
+**Figma**: [link naar figma](https://www.figma.com/proto/UZpcV1O9jElgpOnIFi0qLN/AR-rondleiding?page-id=0%3A1&node-id=1-3&node-type=canvas&viewport=700%2C527%2C0.93&t=E6ITg2acx4zagTFb-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=1%3A3)
 
 Wanner je de app opent kom je op een scherm terecht waar je een map kan zien van de school. LET OP, er moet niet ingelogd worden aangezien de uitleg is voor iedereen hetzelfde is. Wanneer je op het startscherm zit kan je kijken waar je jezelf ergens bevindt en zo een locatie bij jou in de buurt selecteren. Eens je deze locatie selecteert zal er een transitie gebeuren naar je camera.
 
