@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:code/screens/DetailPage.dart';
+import 'package:code/screens/CameraPage.dart';
 
 class PositionedButton extends StatelessWidget {
   final int index;

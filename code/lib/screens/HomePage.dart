@@ -12,7 +12,7 @@ class HomePage extends StatelessWidget {
         children: [
           // Main interactive viewer with the image and positioned buttons
           SizedBox(
-            height: MediaQuery.of(context).size.height * 0.85,
+            height: MediaQuery.of(context).size.height,
             child: InteractiveViewer(
               boundaryMargin: const EdgeInsets.all(20),
               minScale: 0.1,
@@ -23,11 +23,11 @@ class HomePage extends StatelessWidget {
                   Image.asset(
                     'assets/images/grondplan_rondleiding_groot.jpg',
                     fit: BoxFit.fitHeight,
-                    height: MediaQuery.of(context).size.height,
+                    height: MediaQuery.of(context).size.height* 0.90,
                   ),
                   // Custom positioned buttons
-                  const PositionedButton(index: 1, x: 160, y: 220),
-                  const PositionedButton(index: 2, x: 930, y: 260),
+                  const PositionedButton(index: 1, x: 140, y: 200),
+                  const PositionedButton(index: 2, x: 850, y: 240),
                 ],
               ),
             ),
