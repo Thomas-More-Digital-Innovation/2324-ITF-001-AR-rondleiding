@@ -13,18 +13,18 @@ class HomePage extends StatelessWidget {
           boundaryMargin: const EdgeInsets.all(20),
           minScale: 0.5,
           maxScale: 3.0,
+          constrained: false,
 
           child: Stack(
             children: [
               Image.asset(
                 'assets/images/grondplan_rondleiding_groot.jpg', // Place your image in the assets folder
-                fit: BoxFit.cover,
+                fit: BoxFit.fitHeight,
                 height: MediaQuery.of(context).size.height,
               ),
               // Buttons placed at specific locations
-              const PositionedButton(index: 1, x: 0, y: 100),
-              const PositionedButton(index: 2, x: 50, y: 400),
-              const PositionedButton(index: 3, x: 350, y: 200),
+              const PositionedButton(index: 1, x: 160, y: 220),
+              const PositionedButton(index: 2, x: 930, y: 260),
               // Add more PositionedButton widgets as needed
             ],
           ),
