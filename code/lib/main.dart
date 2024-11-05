@@ -14,6 +14,7 @@ class ArRondleiding extends StatelessWidget {
       title: 'AR Rondleiding',
       theme: ThemeData(
         primarySwatch: Colors.blue,
+        scaffoldBackgroundColor: const Color(0xFFFFFFFF)
       ),
       home: const HomePage(),
     );
