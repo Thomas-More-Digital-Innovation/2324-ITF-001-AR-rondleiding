@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../screens/CameraPage.dart';
+
 class CustomCameraOverlay extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -22,8 +24,12 @@ class CustomCameraOverlay extends StatelessWidget {
               top: -40, // Adjust this value to control the vertical offset
               child: IconButton(
                 onPressed: () {
-                  // Handle button press
-                  print("Camera button pressed");
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const CameraPage(index: 0),
+                    ),
+                  );
                 },
                 icon: Stack(
                   alignment: Alignment.center,

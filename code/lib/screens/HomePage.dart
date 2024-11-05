@@ -26,8 +26,8 @@ class HomePage extends StatelessWidget {
                     height: MediaQuery.of(context).size.height* 0.90,
                   ),
                   // Custom positioned buttons
-                  const PositionedButton(index: 1, x: 140, y: 200),
-                  const PositionedButton(index: 2, x: 850, y: 240),
+                  const PositionedButton(id: 1, x: 140, y: 200, name: 'ICE cube',),
+                  const PositionedButton(id: 2, x: 850, y: 240, name: 'Lunch ruimte',),
                 ],
               ),
             ),
