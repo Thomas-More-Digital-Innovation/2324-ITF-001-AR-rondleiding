@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../screens/CameraPage.dart';
 
-class CustomCameraOverlay extends StatelessWidget {
+class Bottomnavigationhome extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(

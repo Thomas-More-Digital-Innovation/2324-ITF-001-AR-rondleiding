@@ -14,7 +14,6 @@ class HomePage extends StatelessWidget {
           SizedBox(
             height: MediaQuery.of(context).size.height,
             child: InteractiveViewer(
-              boundaryMargin: const EdgeInsets.all(20),
               minScale: 0.1,
               maxScale: 2.0,
               constrained: false,
@@ -37,7 +36,7 @@ class HomePage extends StatelessWidget {
             bottom: 0,
             left: 0,
             right: 0,
-            child: CustomCameraOverlay(),
+            child: Bottomnavigationhome(),
           ),
         ],
       ),

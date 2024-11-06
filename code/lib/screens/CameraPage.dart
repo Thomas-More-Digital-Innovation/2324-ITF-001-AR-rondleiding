@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../components/BottomTextTool.dart';
+
 class CameraPage extends StatelessWidget {
   final int index;
 
@@ -22,11 +24,17 @@ class CameraPage extends StatelessWidget {
       appBar: AppBar(
         title: Text('Detail Page for Button $index'),
       ),
-      body: Center(
-        child: Text(
-          name,
-          style: const TextStyle(fontSize: 24),
-        ),
+      body: const Center(
+        child: Stack(
+          children: [
+            Positioned(
+              bottom: 0,
+              left: 0,
+              right: 0,
+              child: BottomTextTool(),
+            ),
+          ],
+        )
       ),
     );
   }
