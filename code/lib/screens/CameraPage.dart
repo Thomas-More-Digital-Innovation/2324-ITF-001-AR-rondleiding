@@ -1,3 +1,4 @@
+import 'package:code/components/Appbar.dart';
 import 'package:flutter/material.dart';
 
 import '../components/BottomTextTool.dart';
@@ -21,9 +22,7 @@ class CameraPage extends StatelessWidget {
     }
 
     return Scaffold(
-      appBar: AppBar(
-        title: Text('Detail Page for Button $index'),
-      ),
+      appBar: CustomAppBar(),
       body: const Center(
         child: Stack(
           children: [

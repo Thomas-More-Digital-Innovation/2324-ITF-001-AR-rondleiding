@@ -9,8 +9,8 @@ class BottomTextTool extends StatefulWidget {
 
 class _BottomTextToolState extends State<BottomTextTool>
     with SingleTickerProviderStateMixin {
-  double _height = 100.0; // Initial height
-  double _maxHeight = 400.0; // Maximum height when fully pulled up
+  double _height = 150.0; // Initial height
+  double _maxHeight = 800.0; // Maximum height when fully pulled up
   bool _isExpanded = false;
   late AnimationController _controller;
   late Animation<double> _animation;
