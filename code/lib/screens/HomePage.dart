@@ -22,11 +22,21 @@ class HomePage extends StatelessWidget {
                   Image.asset(
                     'assets/images/grondplan_rondleiding_groot.jpg',
                     fit: BoxFit.fitHeight,
-                    height: MediaQuery.of(context).size.height* 0.90,
+                    height: MediaQuery.of(context).size.height * 0.90,
                   ),
                   // Custom positioned buttons
-                  const PositionedButton(id: 1, x: 140, y: 200, name: 'ICE cube',),
-                  const PositionedButton(id: 2, x: 850, y: 240, name: 'Lunch ruimte',),
+                  const PositionedButton(
+                    id: 1,
+                    x: 140,
+                    y: 200,
+                    name: 'ICE cube',
+                  ),
+                  const PositionedButton(
+                    id: 2,
+                    x: 850,
+                    y: 240,
+                    name: 'Lunch ruimte',
+                  ),
                 ],
               ),
             ),
