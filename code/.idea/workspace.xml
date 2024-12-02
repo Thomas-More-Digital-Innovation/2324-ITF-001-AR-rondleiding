@@ -5,11 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b4927cd8-9e73-4e5a-b1f5-27bfe31e2cf1" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/lib/components/Appbar.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/components/BottomNavigationHome.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/components/BottomNavigationHome.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/components/PositionedButton.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/components/PositionedButton.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/components/BottomTextTool.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/components/BottomTextTool.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/screens/CameraPage.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/CameraPage.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/screens/HomePage.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/HomePage.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,9 +42,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 4
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 4
+}</component>
   <component name="ProjectId" id="2oQ1fUAc8Wp2qlCLxBomwmRlxVn" />
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1" />
@@ -68,7 +67,7 @@
     "cf.first.check.clang-format": "false",
     "cidr.known.project.marker": "true",
     "dart.analysis.tool.window.visible": "false",
-    "git-widget-placeholder": "CVL-home-screen",
+    "git-widget-placeholder": "CVL-uitleg-lezen",
     "io.flutter.reload.alreadyRun": "true",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "/Users/cesarvanleuffelen/Documents/school folder/3DI/AR-rondleiding/2324-ITF-001-AR-rondleiding/code/assets/images",

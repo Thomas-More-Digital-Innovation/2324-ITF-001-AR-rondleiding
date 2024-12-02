@@ -14,7 +14,6 @@ class HomePage extends StatelessWidget {
           SizedBox(
             height: MediaQuery.of(context).size.height,
             child: InteractiveViewer(
-              boundaryMargin: const EdgeInsets.all(20),
               minScale: 0.1,
               maxScale: 2.0,
               constrained: false,
@@ -23,11 +22,21 @@ class HomePage extends StatelessWidget {
                   Image.asset(
                     'assets/images/grondplan_rondleiding_groot.jpg',
                     fit: BoxFit.fitHeight,
-                    height: MediaQuery.of(context).size.height* 0.90,
+                    height: MediaQuery.of(context).size.height * 0.90,
                   ),
                   // Custom positioned buttons
-                  const PositionedButton(id: 1, x: 140, y: 200, name: 'ICE cube',),
-                  const PositionedButton(id: 2, x: 850, y: 240, name: 'Lunch ruimte',),
+                  const PositionedButton(
+                    id: 1,
+                    x: 140,
+                    y: 200,
+                    name: 'ICE cube',
+                  ),
+                  const PositionedButton(
+                    id: 2,
+                    x: 850,
+                    y: 240,
+                    name: 'Lunch ruimte',
+                  ),
                 ],
               ),
             ),
@@ -37,7 +46,7 @@ class HomePage extends StatelessWidget {
             bottom: 0,
             left: 0,
             right: 0,
-            child: CustomCameraOverlay(),
+            child: Bottomnavigationhome(),
           ),
         ],
       ),
