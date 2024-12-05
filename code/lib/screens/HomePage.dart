@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:code/components/PositionedButton.dart';
 import 'package:code/components/BottomNavigationHome.dart';
 
+import '../components/LanguageDropDown.dart';
+
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
 
@@ -41,6 +43,8 @@ class HomePage extends StatelessWidget {
               ),
             ),
           ),
+          // Language selector in the top right corner
+          const LanguageSelector(),
           // Overlay positioned at the bottom with a camera button
           Positioned(
             bottom: 0,

@@ -1,6 +1,7 @@
-import 'package:code/components/Appbar.dart';
 import 'package:flutter/material.dart';
-
+import 'package:provider/provider.dart';
+import '../StateManager/language_provider.dart';
+import '../components/Appbar.dart';
 import '../components/BottomTextTool.dart';
 
 class CameraPage extends StatelessWidget {
@@ -10,40 +11,44 @@ class CameraPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    String _text = 'something went wrong';
+    // Access the current language from the LanguageProvider
+    final languageProvider = Provider.of<LanguageProvider>(context);
+    final bool isDutch = languageProvider.currentLanguage == 'Dutch';
 
-    String iceCube =
-        "Het Startpunt Ondernemen van Thomas More is een inspirerend initiatief dat studenten ondersteunt bij het ontwikkelen van hun ondernemende vaardigheden en het realiseren van hun zakelijke ideeën. Dit programma biedt een breed scala aan mogelijkheden, van inspiratie en coaching tot evenementen en workshops, allemaal gericht op het stimuleren van ondernemerschap onder studenten."
-        "Een van de belangrijkste aspecten van Startpunt Ondernemen is de inspiratie en coaching die studenten ontvangen. Door middel van diverse evenementen en workshops worden studenten aangemoedigd om hun dromen na te jagen en hun ideeën om te zetten in realiteit. Ervaren coaches staan klaar om hen te begeleiden bij elke stap van het proces, van het verfijnen van hun concept tot het opzetten van een volwaardige start-up."
-        "Daarnaast organiseert Startpunt Ondernemen jaarlijks de Nacht van de Ondernemende Student, een evenement waar studenten kunnen netwerken, ideeën uitwisselen en leren van succesvolle ondernemers. Dit evenement, samen met de regelmatige workshops over onderwerpen zoals marketing, financiën en productontwikkeling, biedt studenten de kennis en vaardigheden die ze nodig hebben om succesvol te zijn in de wereld van ondernemerschap."
-        "Thomas More biedt ook specifieke faciliteiten en ondersteuning voor student-ondernemers. Het student-ondernemer statuut maakt het mogelijk voor studenten om hun studie te combineren met hun ondernemende activiteiten door middel van gewettigde afwezigheid voor vakken en examenspreiding. Bovendien stimuleert de ICE Cube community een innovatieve, creatieve en ondernemende mindset, waar studenten kunnen samenwerken en hun ideeën verder kunnen ontwikkelen."
-        "Om studenten verder te inspireren, heeft Thomas More de Get Shit Done Podcast gelanceerd. In deze podcast worden verhalen van jonge ondernemers gedeeld en worden tips en tricks gegeven om zelf te beginnen met ondernemen."
-        "Voor studenten die geïnteresseerd zijn in deelname aan Startpunt Ondernemen, is het eenvoudig om contact op te nemen met de coördinator, Kristien Denteneer, via e-mail (kristien.denteneer@thomasmore.be). Door deel te nemen aan de verschillende evenementen en workshops kunnen studenten hun ondernemende dromen waarmaken terwijl ze nog studeren."
-        "Startpunt Ondernemen biedt een ondersteunende omgeving waar studenten kunnen leren, groeien en hun ideeën tot leven kunnen brengen. Het is de perfecte plek voor iedereen die zijn ondernemende ambities wil realiseren.";
+    // Define the texts in both Dutch and English
+    const String iceCubeDutch =
+        "Het Startpunt Ondernemen van Thomas More is een inspirerend initiatief dat studenten ondersteunt bij het ontwikkelen van hun ondernemende vaardigheden en het realiseren van hun zakelijke ideeën. Dit programma biedt een breed scala aan mogelijkheden, van inspiratie en coaching tot evenementen en workshops, allemaal gericht op het stimuleren van ondernemerschap onder studenten.";
+    const String iceCubeEnglish =
+        "Thomas More's Entrepreneurship Hub is an inspiring initiative that supports students in developing their entrepreneurial skills and realizing their business ideas. This program offers a wide range of opportunities, from inspiration and coaching to events and workshops, all aimed at promoting entrepreneurship among students.";
 
-    String cafetaria =
-        "De cafetaria van Thomas More is een gezellige plek waar studenten en medewerkers samenkomen om te eten, te drinken en te ontspannen. Je vindt er een gevarieerd aanbod aan snacks, broodjes, warme maaltijden en dranken tegen betaalbare prijzen. Met ruime zitplaatsen en een ontspannen sfeer is het een ideale plek om even pauze te nemen of bij te praten met vrienden en collega's. Afhankelijk van de campus kunnen openingstijden en aanbod variëren, dus check de info van jouw locatie voor actuele details!";
+    const String cafeteriaDutch =
+        "De cafetaria van Thomas More is een gezellige plek waar studenten en medewerkers samenkomen om te eten, te drinken en te ontspannen. Je vindt er een gevarieerd aanbod aan snacks, broodjes, warme maaltijden en dranken tegen betaalbare prijzen. Met ruime zitplaatsen en een ontspannen sfeer is het een ideale plek om even pauze te nemen of bij te praten met vrienden en collega's.";
+    const String cafeteriaEnglish =
+        "Thomas More's cafeteria is a cozy spot where students and staff gather to eat, drink, and relax. You'll find a varied selection of snacks, sandwiches, hot meals, and drinks at affordable prices. With ample seating and a relaxed atmosphere, it’s an ideal place to take a break or catch up with friends and colleagues.";
 
+    // Determine the appropriate text to display based on index and language
+    String displayText = 'Something went wrong';
     if (index == 1) {
-      _text = iceCube;
+      displayText = isDutch ? iceCubeDutch : iceCubeEnglish;
     } else if (index == 2) {
-      _text = cafetaria;
+      displayText = isDutch ? cafeteriaDutch : cafeteriaEnglish;
     }
+
     return Scaffold(
       appBar: CustomAppBar(),
       body: Center(
         child: index == 0
             ? const Text('Camera')
             : Stack(
-                children: [
-                  Positioned(
-                    bottom: 0,
-                    left: 0,
-                    right: 0,
-                    child: BottomTextTool(text: _text),
-                  ),
-                ],
-              ),
+          children: [
+            Positioned(
+              bottom: 0,
+              left: 0,
+              right: 0,
+              child: BottomTextTool(text: displayText),
+            ),
+          ],
+        ),
       ),
     );
   }
