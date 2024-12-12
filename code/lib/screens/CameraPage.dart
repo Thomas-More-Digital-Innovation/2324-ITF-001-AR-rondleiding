@@ -11,26 +11,23 @@ class CameraPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
 
-    String name = '';
-
-    if (index == 0) {
-      name = 'Camera';
-    } else if (index == 1) {
-      name = 'ICE CUBE';
-    } else if (index == 2) {
-      name = 'LUNCH RUIMTE';
-    }
+    const String iceCubeDutch =
+        "Het Startpunt Ondernemen van Thomas More is een inspirerend initiatief dat studenten ondersteunt bij het ontwikkelen van hun ondernemende vaardigheden en het realiseren van hun zakelijke ideeën. Dit programma biedt een breed scala aan mogelijkheden, van inspiratie en coaching tot evenementen en workshops, allemaal gericht op het stimuleren van ondernemerschap onder studenten.";
+    const String iceCubeEnglish =
+        "De cafetaria van Thomas More is een gezellige plek waar studenten en medewerkers samenkomen om te eten, te drinken en te ontspannen. Je vindt er een gevarieerd aanbod aan snacks, broodjes, warme maaltijden en dranken tegen betaalbare prijzen. Met ruime zitplaatsen en een ontspannen sfeer is het een ideale plek om even pauze te nemen of bij te praten met vrienden en collega's.";
 
     return Scaffold(
       appBar: CustomAppBar(),
-      body: const Center(
-        child: Stack(
+      body: Center(
+        child: index == 0 ?
+        const Text('camera') :
+        Stack(
           children: [
             Positioned(
               bottom: 0,
               left: 0,
               right: 0,
-              child: BottomTextTool(),
+              child: BottomTextTool(text: index == 1 ? iceCubeDutch : index == 2 ? iceCubeEnglish : ''),
             ),
           ],
         )
