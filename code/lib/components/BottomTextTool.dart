@@ -2,8 +2,9 @@ import 'package:flutter/material.dart';
 
 class BottomTextTool extends StatefulWidget {
   final String text;
+  final String expandableText;
 
-  const BottomTextTool({super.key, required this.text});
+  const BottomTextTool({super.key, required this.text, required this.expandableText});
 
   @override
   _BottomTextToolState createState() => _BottomTextToolState();
@@ -118,7 +119,7 @@ class _BottomTextToolState extends State<BottomTextTool>
                   child: Padding(
                     padding: const EdgeInsets.all(16.0),
                     child: Text(
-                      _isExpanded ? widget.text : "Lees hier de tekst...",
+                      _isExpanded ? widget.text : widget.expandableText,
                       style:
                       const TextStyle(fontSize: 16.0, color: Colors.white),
                     ),

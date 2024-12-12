@@ -1,7 +1,14 @@
 import 'package:flutter/material.dart';
 
 class LanguageSelector extends StatefulWidget {
-  const LanguageSelector({Key? key}) : super(key: key);
+  final String selectedLanguage;
+  final ValueChanged<String> onLanguageChanged;
+
+  const LanguageSelector({
+    Key? key,
+    required this.selectedLanguage,
+    required this.onLanguageChanged,
+  }) : super(key: key);
 
   @override
   _LanguageSelectorState createState() => _LanguageSelectorState();
@@ -13,8 +20,7 @@ class _LanguageSelectorState extends State<LanguageSelector> {
   @override
   void initState() {
     super.initState();
-    final Locale deviceLocale = WidgetsBinding.instance.platformDispatcher.locale;
-    selectedLanguage = deviceLocale.languageCode == 'nl' ? 'Dutch' : 'English';
+    selectedLanguage = widget.selectedLanguage;
   }
 
   @override
@@ -58,12 +64,12 @@ class _LanguageSelectorState extends State<LanguageSelector> {
                 setState(() {
                   selectedLanguage = value;
                 });
-                // Add any logic to update app state or perform navigation here.
+                widget.onLanguageChanged(value);
               }
             },
-            dropdownColor: Colors.white, // Dropdown background color
+            dropdownColor: Colors.white,
             style: const TextStyle(
-              color: Colors.black, // Text color
+              color: Colors.black,
               fontSize: 16,
             ),
           ),
