@@ -6,6 +6,7 @@ class PositionedButton extends StatelessWidget {
   final double x;
   final double y;
   final String name;
+  final String language;
 
   const PositionedButton({
     super.key,
@@ -13,6 +14,7 @@ class PositionedButton extends StatelessWidget {
     required this.x,
     required this.y,
     required this.name,
+    required this.language,
   });
 
   @override
@@ -25,7 +27,7 @@ class PositionedButton extends StatelessWidget {
           Navigator.push(
             context,
             MaterialPageRoute(
-              builder: (context) => CameraPage(index: id),
+              builder: (context) => CameraPage(index: id, language: language),
             ),
           );
         },
