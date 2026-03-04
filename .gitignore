@@ -1,0 +1,13 @@
+# Unity export libraries
+**/unityLibrary/
+/android/unityLibrary/
+/code/android/unityLibrary/
+
+# Unity temporary folders
+/unity/Library/
+/unity/Temp/
+/unity/Logs/
+/code/unity/
+/code/unity/Library/
+/code/unity/Temp/
+/code/unity/Logs/
