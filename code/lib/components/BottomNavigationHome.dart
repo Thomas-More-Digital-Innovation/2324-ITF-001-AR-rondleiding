@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
-
 import '../screens/CameraPage.dart';
 
-class Bottomnavigationhome extends StatelessWidget {
+class BottomNavigationHome extends StatelessWidget {
+  final String language;
+
+  const BottomNavigationHome({super.key, required this.language});
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -27,7 +30,7 @@ class Bottomnavigationhome extends StatelessWidget {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => const CameraPage(index: 0),
+                      builder: (context) => CameraPage(index: 0, language: language),
                     ),
                   );
                 },
